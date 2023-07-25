@@ -1,6 +1,130 @@
-        body {
-            background-image:url("https://raw.githubusercontent.com/W0NYV/pera1/main/w0nyv.jpg");
-            background-size: 125px;
-            background-color:rgba(255,255,255,0.65);
-            background-blend-mode:lighten;
+.slick-next {
+    right: 10px;
+}
+
+.slick-prev {
+    left: 10px;
+    z-index: 9999;
+}
+
+.slick-dots li button:before, .slick-dots li.slick-active button:before {
+    color: white;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(8, 15, 19, 1);
+    color: white;
+    font-family: Roboto, 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', Meiryo, メイリオ, '游ゴシック Medium', 'Yu Gothic Medium', '游ゴシック体', 'Yu Gothic', YuGothic, 'MS PGothic', Osaka, arial, sans-serif;
+}
+
+header {
+    text-align: center;
+}
+
+a {
+    color:white;
+}
+a:visited{
+    color:white;
+}
+
+li {
+    list-style: none;
+}
+
+footer{
+    text-align:center;
+}
+
+@media (min-width: 1280px) {
+    main {
+        margin: 0 auto;
+        width: 1280px;
+    }
+
+    .description {
+        display: flex;
+        flex-direction: row;
+    }
+
+        .description li:first-child {
+            margin-right: 100px;
         }
+
+    .flexbox {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .fade {
+        width: 60%;
+        margin: 0 2%;
+        padding: 0;
+        height: auto;
+    }
+
+        .fade img {
+            width: 100%;
+        }
+
+    .flyer {
+        width: 30%;
+        margin-top: 16px;
+    }
+
+        .flyer img {
+            width: 100%;
+        }
+}
+
+@media (max-width: 1280px) {
+    main {
+        padding: 40px;
+        margin: 0 auto;
+    }
+
+    header img {
+        text-align: center;
+        width: 100%;
+    }
+
+    .description {
+        text-align: left;
+    }
+
+    .description p{
+        padding-left:4%;
+    }
+
+    .fade {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        height: auto;
+    }
+
+        .fade img {
+            width: 100%;
+        }
+
+    .flyer {
+        margin:0 auto;
+        width: 80%;
+    }
+
+        .flyer img {
+            width: 100%;
+        }
+}
+@media (max-width: 1000px) {
+    main {
+        padding: 4%;
+        margin: 0 auto;
+    }
+}
+
+    .border {
+        border: solid 1px white;
+    }
