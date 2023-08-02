@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>draw(Tokyo);</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="./tokyo.css">
+</head>
+<body>
+    <video id="bgVideo" src="./videos/drawtokyoback.mp4" autoplay loop muted></video>
+    <div id="wrapper"></div>
+    <main>
+        <nav>
+            <ul>
+                <li>
+                    <p><img src="images/draw_logo_tokyo.png"></p>
+                </li>
+                <li>
+                    <p><a href="#about"> ABOUT</a></p>
+                </li>
+                <li>
+                    <p><a href="#performer">PERFORMER</a></p>
+                </li>
+                <li>
+                    <p><a href="https://function-draw.com/">draw(); WEBSITE</a></p>
+                </li>
+            </ul>
+        </nav>
+        <div id="startView">
+            <h1><img src="images/draw_logo_tokyo.png"></h1>
+            <div class="description">
+                <p>Audio/Visual Event <b>"draw();"</b> at Tokyo 2024/2</p>
+                <ul class="social">
+                    <li>
+                        <p><a href="https://twitter.com/function_draw"><img src="./images/sns_icons/twiiter_w.svg"><br />@function_draw</a></p>
+                    </li>
+                    <li>
+                        <p><a href="https://twitter.com/search?q=drawTokyo"><img src="./images/sns_icons/twiiter_w.svg"><br />#drawTokyo</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="about"></div>
+        <div class="about">
+            <p><b>ABOUT</b></p>
+            <p class="about_description">オーディオとビジュアルの<br />パフォーマンスを楽しむリアルイベント</p>
+            <p>日付：2024年2月</p>
+            <p>時間：デイタイム</p>
+            <p>場所：東京</p>
+            <p class="about_description">(予定日の変更等、可能性あり)</p>
+        </div>
+        <div id="performer"></div>
+        <div class="performer">
+            <p><b>PERFORMER</b></p>
+            <p>Saina</p>
+            <p>W0NYV</p>
+            <p>ymg</p>
+            <p>uni101</p>
+            <p>maguro</p>
+            <p>RIKUPI-X</p>
+            <p><small><br><i>and more...</i></small></p>
+        </div>
+        <footer>
+            <p><img src="images/draw_logo_tokyo.png"></p>
+            <p>Copyright © draw(); All Rights Reserved.</p>
+        </footer>
+    </main>
+    <script>
+        //動画サイズの指定
+        const videoWidth = 1280;
+        const videoHeight = 720;
+
+        //背景の動画サイズ調整
+        function bgVideoResize() {
+            var window_w = window.innerWidth;
+            var window_h = window.innerHeight;
+
+            document.getElementById('wrapper').style.height = window_h + 'px';
+
+            //画面アスペクト比を計算して余白ができないように優先する
+            if (window_w / window_h > 16 / 9) {
+                document.getElementById('bgVideo').style.width = window_w + 'px';
+                document.getElementById('bgVideo').style.height = 'auto';
+                document.getElementById('bgVideo').style.left = 0 + 'px';
+            } else {
+                document.getElementById('bgVideo').style.width = 'auto';
+                document.getElementById('bgVideo').style.height = window_h + 'px';
+                console.log(document.getElementById('bgVideo').style.left);
+            }
+        }
+
+        //画面が読み込まれたとき
+        window.addEventListener('load', (event) => {
+            bgVideoResize();
+        });
+        //画面がリサイズされたとき
+        window.addEventListener('resize', (event) => {
+            bgVideoResize();
+        });
+    </script>
+</body>
+</html>

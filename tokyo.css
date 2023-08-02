@@ -1,0 +1,262 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: Roboto, 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', Meiryo, メイリオ, '游ゴシック Medium', 'Yu Gothic Medium', '游ゴシック体', 'Yu Gothic', YuGothic, 'MS PGothic', Osaka, arial, sans-serif;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+    a:visited {
+        color: white;
+        text-decoration: none;
+    }
+
+#bgVideo {
+    margin: 0;
+    padding: 0;
+    top: 0;
+    position: fixed;
+    z-index: -2;
+    overflow: hidden;
+}
+
+#wrapper {
+    background: url(./images/bg_trans.png) repeat;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+nav {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    top: 0;
+    background-image: linear-gradient(0deg, rgba(85, 85, 85, 0.15), rgba(0, 0, 0, 1));
+}
+
+    nav ul {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 600px;
+        height: 50px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    nav li {
+        vertical-align: middle;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        list-style: none;
+    }
+
+        nav li p {
+            font-size: 13pt;
+            font-weight: bold;
+            position: relative;
+            text-align: center;
+        }
+
+            nav li p img {
+                position: absolute;
+                top: -8px;
+                left: 36px;
+                width: 60%;
+            }
+
+#startView {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+h1 {
+    padding-top: 20vh;
+    text-align: center;
+}
+
+    h1 img {
+        display: block;
+        margin: auto;
+    }
+
+.description {
+    width: 600px;
+    background-color: rgba(10, 10, 10, 0.8);
+    padding: 0.5%;
+    margin: 10vh auto;
+    border-radius: 6px;
+}
+
+    .description p {
+        font-size: 18pt;
+        text-align: center;
+    }
+
+.social {
+    margin: 0 auto;
+    width: 60%;
+    opacity: 0.9;
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0;
+}
+
+    .social li {
+        width: 100%;
+        text-align: center;
+        vertical-align: middle;
+        list-style: none;
+    }
+
+        .social li p {
+            font-size: 12pt;
+        }
+
+            .social li p img {
+                width: 16%;
+            }
+
+.about {
+    width: 500px;
+    background-color: rgba(10, 10, 10, 0.8);
+    padding: 0.5%;
+    margin: 4% auto 0 auto;
+    border-radius: 6px;
+    text-align: center;
+}
+
+    .about p:first-child {
+        margin-left: 4%;
+        font-size: 16pt;
+    }
+
+    .about p {
+        line-height: 40%;
+        margin-left: 6%;
+        font-size: 13pt;
+    }
+
+.about_description {
+    margin: 2% 0 2% 0;
+    display: inline-block;
+    font-size: 11pt !important;
+    line-height: 1.5 !important;
+}
+
+.performer {
+    width: 300px;
+    background-color: rgba(10, 10, 10, 0.8);
+    padding: 0.5%;
+    margin: 4% auto 4% auto;
+    border-radius: 6px;
+    text-align: center;
+}
+
+    .performer p:first-child {
+        margin-left: 4%;
+        font-size: 16pt;
+    }
+
+    .performer p {
+        margin-left: 6%;
+        font-size: 14pt;
+    }
+
+footer {
+    padding: 2% 0 0 0;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(15, 15, 15, 0.2));
+    text-align: center;
+}
+
+    footer p {
+        margin: 0;
+    }
+
+        footer p:first-child {
+            margin-bottom: 1%;
+        }
+
+            footer p:first-child img {
+                width: 8%;
+            }
+
+        footer p:last-child {
+            padding-bottom: 1%;
+        }
+
+#about, #performer {
+    padding-top: 1px;
+}
+
+@media (max-height: 520px) {
+    #startView {
+        margin: 0;
+        padding: 0;
+        height: 520px;
+    }
+}
+
+@media (max-width: 1000px) {
+    footer p:first-child img {
+        width: 200px;
+    }
+}
+
+@media (max-width: 760px) {
+    nav {
+        display: none;
+    }
+
+    h1 {
+        padding-top: 15vh;
+    }
+
+        h1 img {
+            width: 80%;
+            display: block;
+            margin: auto;
+        }
+
+    .description {
+        width: 80%;
+    }
+
+    .social {
+        width: 90%;
+    }
+
+    .about {
+        width: 80%;
+    }
+
+        .about p {
+            font-size: 11pt;
+        }
+
+    .about_description {
+        font-size: 10pt !important;
+        line-height: 1.5 !important;
+    }
+
+    footer p {
+        font-size: 10pt;
+    }
+
+        footer p:first-child img {
+            width: 120px;
+        }
+}

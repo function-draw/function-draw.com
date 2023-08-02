@@ -24,18 +24,19 @@ header {
 }
 
 a {
-    color:white;
+    color: white;
 }
-a:visited{
-    color:white;
-}
+
+    a:visited {
+        color: white;
+    }
 
 li {
     list-style: none;
 }
 
-footer{
-    text-align:center;
+footer {
+    text-align: center;
 }
 
 @media (min-width: 1280px) {
@@ -94,9 +95,9 @@ footer{
         text-align: left;
     }
 
-    .description p{
-        padding-left:4%;
-    }
+        .description p {
+            padding-left: 4%;
+        }
 
     .fade {
         width: 100%;
@@ -110,7 +111,7 @@ footer{
         }
 
     .flyer {
-        margin:0 auto;
+        margin: 0 auto;
         width: 80%;
     }
 
@@ -118,13 +119,27 @@ footer{
             width: 100%;
         }
 }
+
 @media (max-width: 1000px) {
     main {
         padding: 4%;
         margin: 0 auto;
     }
+
+    .description {
+        padding-left: 0;
+    }
+
+        .description p {
+            padding-left: 4%;
+        }
+
+    .flyer {
+        margin: 0 auto;
+        width: 100%;
+    }
 }
 
-    .border {
-        border: solid 1px white;
-    }
+.border {
+    border: solid 1px white;
+}
