@@ -82,37 +82,37 @@
         </footer>
     </main>
     <script>
-        //動画サイズの指定
-        const videoWidth = 1280;
-        const videoHeight = 720;
+    //動画サイズの指定
+    const videoWidth = 1280;
+    const videoHeight = 720;
 
-        //背景の動画サイズ調整
-        function bgVideoResize() {
-            var window_w = window.innerWidth;
-            var window_h = window.innerHeight;
+    //背景の動画サイズ調整
+    function bgVideoResize() {
+        var window_w = window.innerWidth;
+        var window_h = window.innerHeight;
 
-            document.getElementById('wrapper').style.height = window_h + 'px';
+        document.getElementById('wrapper').style.height = window_h + 'px';
 
-            //画面アスペクト比を計算して余白ができないように優先する
-            if (window_w / window_h > 16 / 9) {
-                document.getElementById('bgVideo').style.width = window_w + 'px';
-                document.getElementById('bgVideo').style.height = 'auto';
-                document.getElementById('bgVideo').style.left = 0 + 'px';
-            } else {
-                document.getElementById('bgVideo').style.width = 'auto';
-                document.getElementById('bgVideo').style.height = window_h + 'px';
-                console.log(document.getElementById('bgVideo').style.left);
-            }
+        //画面アスペクト比を計算して余白ができないように優先する
+        if (window_w / window_h > 16 / 9) {
+            document.getElementById('bgVideo').style.width = window_w + 'px';
+            document.getElementById('bgVideo').style.height = 'auto';
+            document.getElementById('bgVideo').style.left = ((window_w - document.getElementById('bgVideo').offsetWidth) / 2) + 'px';
+        } else {
+            document.getElementById('bgVideo').style.width = 'auto';
+            document.getElementById('bgVideo').style.height = window_h + 'px';
+            document.getElementById('bgVideo').style.left = ((window_w - document.getElementById('bgVideo').offsetWidth) / 2) + 'px';
         }
+    }
 
-        //画面が読み込まれたとき
-        window.addEventListener('load', (event) => {
-            bgVideoResize();
-        });
-        //画面がリサイズされたとき
-        window.addEventListener('resize', (event) => {
-            bgVideoResize();
-        });
+    //画面が読み込まれたとき
+    window.addEventListener('load', (event) => {
+        bgVideoResize();
+    });
+    //画面がリサイズされたとき
+    window.addEventListener('resize', (event) => {
+        bgVideoResize();
+    });
     </script>
 </body>
 </html>
