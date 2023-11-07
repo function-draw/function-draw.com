@@ -39,6 +39,19 @@ footer {
     text-align: center;
 }
 
+.topinfo{
+    width: 80%;
+    margin: 2% auto;
+    text-align: center;
+    font-size: 18pt;
+}
+
+.topinfo img{
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
 @media (min-width: 1280px) {
     main {
         margin: 0 auto;
@@ -137,6 +150,11 @@ footer {
     .flyer {
         margin: 0 auto;
         width: 100%;
+    }
+
+    .topinfo{
+        width: 90%;
+        font-size: 16pt;
     }
 }
 
