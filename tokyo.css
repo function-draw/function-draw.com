@@ -168,6 +168,17 @@ h1 {
     padding: 0 0 2% 0;
     font-size: 11pt !important;
 }
+.about .caution{
+    font-size: 13px;
+    line-height: 1.2;
+    text-align: left;
+    width: 70%;
+    background-color:  rgba(39, 39, 39, 0.8);
+    color: #f79999;
+    padding: 2%;
+    margin: 3%  auto;
+    border-radius: 6px;
+}
 
 .performer {
     width: 500px;
@@ -271,6 +282,9 @@ footer {
     .about_description {
         font-size: 10pt !important;
         line-height: 1.5 !important;
+    }
+    .about .caution{
+        width: 85%;
     }
 
     .about iframe{
